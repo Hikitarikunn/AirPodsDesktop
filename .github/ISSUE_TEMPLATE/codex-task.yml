@@ -1,0 +1,92 @@
+name: Codex implementation task
+description: Planner-authored task contract for Codex execution
+title: "[Codex] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This Issue is the implementation contract between the planner and Codex.
+        Keep the scope precise. If requirements materially change, update the Issue before implementation.
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What outcome must be achieved?
+      placeholder: Describe the concrete user-facing or engineering outcome.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Relevant files, modules, behavior, constraints, or prior decisions.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: In scope
+      description: What Codex is allowed and expected to change.
+      placeholder: |
+        - Component/file A
+        - Component/file B
+    validations:
+      required: true
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+      description: Explicitly list nearby changes Codex must not make.
+      placeholder: |
+        - No dependency upgrades
+        - No unrelated refactors
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Implementation requirements
+      description: Functional and technical constraints.
+      placeholder: |
+        - Requirement 1
+        - Requirement 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Objective conditions the planner will use to accept or reject the PR.
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+        - [ ] Criterion 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification
+      description: Tests, builds, manual checks, or CI expected before review.
+      placeholder: |
+        - Windows CI passes
+        - Relevant unit/integration test passes
+        - Manual UI check if applicable
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and notes
+      description: Known edge cases, migration concerns, compatibility constraints, or follow-up work.
+    validations:
+      required: false
